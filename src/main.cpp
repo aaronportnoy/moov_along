@@ -37,12 +37,12 @@ void mp4_stats(unsigned long long total_file_size, Box *mp4box) {
 	*/
 	Box* moov = mp4box->get("moov");
 	if (!moov) {
-		fprintf(stderr, "Error: 'moov' box not found\n");
+		fprintf(stderr, "'moov' box not found\n");
 		return;
 	}
 	Box* mvhd = moov->get("mvhd");
 	if (!mvhd) {
-     	   fprintf(stderr, "Error: 'mvhd' box not found\n");
+     	   fprintf(stderr, "'mvhd' box not found\n");
 	        return;
 	}
 	MovieHeaderBox *mvhd_box = dynamic_cast<MovieHeaderBox*>(mvhd);
