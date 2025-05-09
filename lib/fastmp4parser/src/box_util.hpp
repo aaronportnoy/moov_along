@@ -17,6 +17,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <cstdint>
 
 class Box {
 public:
