@@ -10,11 +10,11 @@
 using namespace std;
 
 Box::Box(Box &copy_box) {
+	char type[16384];
 	if (!copy_box.type) {
 		return;
 	}
 	this->size = copy_box.size;
-	char type[UINT16_MAX];
 	memcpy(type, copy_box.raw_data, this->size); // copy to local buf
 	std::strncpy(this->type, type, 4); // copy to object
 	this->parent = copy_box.parent;
